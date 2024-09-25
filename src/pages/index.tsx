@@ -16,7 +16,7 @@ const geistMono = localFont({
 export default function Home() {
   return (
     
-      <main className=" ">
+      <main>
         <Herosection/>
       </main>
        

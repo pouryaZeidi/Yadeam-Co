@@ -37,16 +37,6 @@ const InputComponent: React.FC<InputComponentProps> = ({
         />
         </label>
     </div>
-    // <div className="flex flex-col space-y-2 w-full ">
-    //   {label && <label className="text-sm font-medium text-white">{label}</label>}
-    //   <input
-    //     type={type}
-    //     placeholder={placeholder}
-    //     value={value}
-    //     onChange={handleChange}
-    //     className={`p-3 border border-primary1 text-white focus:outline-none focus:ring-[.5px] bg-transparent focus:ring-primary3 rounded h-[45px] ${className} placeholder:opacity-45`}
-    //   />
-    // </div>
   );
 };
 
