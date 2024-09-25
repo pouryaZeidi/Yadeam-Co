@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
 interface InputComponentProps {
-  type?: string; // نوع ورودی: 'text', 'password', 'email' و غیره
-  placeholder?: string; // متن راهنما
-  className?: string; // استایل‌های سفارشی
-  label?: string; // برچسب برای ورودی
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void; // تابع برای مدیریت تغییرات
+  type?: string; 
+  placeholder?: string; 
+  className?: string; 
+  label?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void; 
 }
 
 const InputComponent: React.FC<InputComponentProps> = ({
-  type = 'text', // مقدار پیش‌فرض 'text'
+  type = 'text',
   placeholder = '',
   className = '',
   label,
@@ -20,7 +20,7 @@ const InputComponent: React.FC<InputComponentProps> = ({
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
     if (onChange) {
-      onChange(e); // اگر تابع onChange وجود دارد، آن را فراخوانی کنید
+      onChange(e); 
     }
   };
 
@@ -32,7 +32,7 @@ const InputComponent: React.FC<InputComponentProps> = ({
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
-        className={`p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${className}`}
+        className={`p-3 border border-gray-300 text-[14px]  sm:text-[18px]  text-white focus:outline-none focus:ring-2 bg-primary2 focus:ring-blue-500 rounded-[40px] h-[45px] ${className}`}
       />
     </div>
   );
