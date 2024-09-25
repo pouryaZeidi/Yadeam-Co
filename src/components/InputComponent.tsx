@@ -26,15 +26,27 @@ const InputComponent: React.FC<InputComponentProps> = ({
 
   return (
     <div className="flex flex-col space-y-2 w-full ">
-      {label && <label className="text-sm font-medium text-white">{label}</label>}
+      <label className="text-sm text-white">
+        {label && <span>{label}</span>}
       <input
         type={type}
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
-        className={`p-3 border border-primary1 text-[14px]  sm:text-[18px]  text-white focus:outline-none focus:ring-2 bg-primary1 focus:ring-primary3 rounded-[40px] h-[45px] ${className}`}
-      />
+        className={`p-3 border border-primary1 mt-1  text-white focus:outline-none focus:ring-[.5px] bg-transparent focus:ring-primary3 rounded h-[42px] ${className} placeholder:opacity-45`}
+        />
+        </label>
     </div>
+    // <div className="flex flex-col space-y-2 w-full ">
+    //   {label && <label className="text-sm font-medium text-white">{label}</label>}
+    //   <input
+    //     type={type}
+    //     placeholder={placeholder}
+    //     value={value}
+    //     onChange={handleChange}
+    //     className={`p-3 border border-primary1 text-white focus:outline-none focus:ring-[.5px] bg-transparent focus:ring-primary3 rounded h-[45px] ${className} placeholder:opacity-45`}
+    //   />
+    // </div>
   );
 };
 
