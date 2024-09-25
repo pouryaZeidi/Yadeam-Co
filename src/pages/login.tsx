@@ -17,9 +17,11 @@ const Login = () => {
       <div className="absolute inset-0 bg-black opacity-95"></div>
       
       {/* محتوای لاگین */}
-      <div className="relative text-black w-[75%] sm:w-[65%]  md:w-[60%] lg:w-[30%] h-[80%] bg-white bg-opacity-10 backdrop-filter backdrop-blur-xs rounded-lg flex flex-col p-5 space-y-4">
-        <h2 className="text-center text-lg font-semibold text-white">Login</h2>
-        
+      <div className="relative text-black w-[75%] sm:w-[65%] md:w-[60%] lg:w-[30%] h-[80%] bg-white bg-opacity-10 backdrop-filter backdrop-blur-xs rounded-lg flex flex-col p-5 space-y-4">
+        <div className=' flex justify-between items-center w-[90%]'>
+        <h2 className="text-center text-lg font-bold text-white">Login</h2>
+        <img src="/YadeamLinkedInPageLogo.png" alt="" className='rounded-full w-[80px] ' />
+        </div>
         <InputComponent 
           type='email' 
           placeholder='Enter your email' 
@@ -50,10 +52,17 @@ const Login = () => {
 
         {/* دکمه ورود با Gmail در انتهای فرم */}
         <div className="mt-auto">
-          <button className="flex items-center justify-center bg-white text-black p-2 rounded-md hover:scale-105 hover:transition-all w-full">
+          <button className="flex items-center justify-center bg-white text-black p-2 rounded-md hover:scale-105 hover:transition-all w-full mt-8">
             <img src="/gmail.png" alt="Google Icon" className="mr-2 w-5 h-5" />
             Login with Gmail
           </button>
+        </div>
+
+        {/* دکمه بازگشت */}
+        <div className="md:mt-14 text-center">
+          <Link href="/" className="text-blue-400 hover:underline">
+            Back
+          </Link>
         </div>
       </div>
     </div>
