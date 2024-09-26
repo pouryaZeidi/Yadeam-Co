@@ -25,7 +25,7 @@ const InputComponent: React.FC<InputComponentProps> = ({
   };
 
   return (
-    <div className="flex flex-col space-y-2 w-full ">
+    <div className="flex flex-col space-y-1 w-full ">
       <label className="text-sm text-white">
         {label && <span>{label}</span>}
       <input
@@ -33,7 +33,7 @@ const InputComponent: React.FC<InputComponentProps> = ({
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
-        className={`p-3 border border-primary1 mt-1  text-white focus:outline-none focus:ring-[.5px] bg-transparent focus:ring-primary3 rounded h-[42px] ${className} placeholder:opacity-45`}
+        className={`p-2 border border-primary1 mt-1  text-white focus:outline-none focus:ring-[.5px] bg-transparent focus:ring-primary3 rounded h-[42px] ${className} placeholder:opacity-45`}
         />
         </label>
     </div>

@@ -43,7 +43,7 @@ const Login = () => {
         <div className="mt-3 text-center text-white">
           <span className='text-[13px]'>
             Don't have an account?{' '}
-            <Link href="/register" className="text-primary2 hover:underline font-bold">
+            <Link href="/signup" className="text-primary2 hover:underline font-bold">
               Create a new account
             </Link>
           </span>
