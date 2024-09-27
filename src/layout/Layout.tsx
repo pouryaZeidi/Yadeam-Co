@@ -1,15 +1,17 @@
+// Layout.tsx
 import React from 'react';
-import ThemeButton from '@/components/ThemeButon';
-import { ThemeProvider } from '@/components/ThemeContext';
+import ThemeButton from '@/components/Theme/ThemeButton';
+import { ThemeProvider } from '@/components/Theme/ThemeContext';
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <ThemeProvider>
+    <>
         <ThemeButton />
       <div className='min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white'>
         {children}
       </div>
-    </ThemeProvider>
+    </>
+    
   );
 };
 
