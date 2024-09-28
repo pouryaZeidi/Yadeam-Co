@@ -19,7 +19,8 @@ const config: Config = {
         black: '#0D0D0D',
       },
       boxShadow: {
-        smallShadow: 'rgba(67, 71, 85, 0.3) 0px 0px 0.25em, rgba(90, 125, 188, 0.2) 0px 0.25em 1em'
+        smallShadow: 'rgba(67, 71, 85, 0.3) 0px 0px 0.25em, rgba(90, 125, 188, 0.2) 0px 0.25em 1em',
+        circleShadow: 'rgba(67, 71, 85, 0.7) 0px 0px 0.25em, rgba(90, 125, 188, 0.2) 0px 0.45em 1em',
       }
     },
   },
