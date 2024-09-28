@@ -7,9 +7,9 @@ const ThemeButton: React.FC = () => {
   const { theme, toggleTheme } = useTheme(); // اکنون toggleTheme به درستی در دسترس است
 
   return (
-    <div className={`flex absolute w-[40px] h-9 items-center justify-center rounded-3xl inset-0 m-3 p-1 z-50 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
+    <div className={`flex absolute w-[40px] h-9 items-center justify-center rounded-3xl inset-0 m-4 mt-10 p-1 z-50 ${theme === 'dark' ? 'bg-gray-800' : 'bg-white'}`}>
       <span 
-        className={`border rounded-full text-2xl border-black p-1 cursor-pointer ${theme === 'dark' ? 'text-yellow-400' : 'text-black'}`} 
+        className={` rounded-full text-2xl  p-2 cursor-pointer ${theme === 'dark' ? 'text-yellow-400' : 'text-black'}`} 
         onClick={toggleTheme}
       >
         {theme === 'dark' ? <FaLightbulb /> : <FaRegLightbulb />}

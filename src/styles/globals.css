@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.shape {
+    width: 300px; /* اندازه بزرگ‌تر */
+    height: 280px; /* اندازه بزرگ‌تر */
+    filter: blur(20px); /* بلار بیشتر */
+}
+.dark .shape {
+    filter: blur(100px); /* بلار در حالت تاریک */
+}
+
+
+.shape1 {
+    animation: spin-slow 26s linear infinite; /* چرخش */
+}
+
+.shape2 {
+    animation: scale 19s ease-in-out infinite; /* بزرگ و کوچک شدن */
+}
+
+.shape3 {
+    animation: spin-slow 21s linear infinite; /* چرخش */
+}
+
+.shape4 {
+    animation: spin-slow 13s linear infinite; /* چرخش */
+}
+
+.shape5 {
+    animation: scale 15s ease-in-out infinite; /* بزرگ و کوچک شدن */
+}
+
+@keyframes spin-slow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: scale(1); /* اندازه اولیه */
+    }
+    50% {
+        transform: scale(1.9); /* بزرگ شدن */
+    }
+}

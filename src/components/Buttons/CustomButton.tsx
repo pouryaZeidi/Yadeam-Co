@@ -11,7 +11,7 @@ interface CustomButtonProps {
 
 const CustomButton: React.FC<CustomButtonProps> = ({ text, onClick, className = '', icon, theme = 'light' }) => {
   // کلاس‌های ثابت
-  const baseClasses = 'py-2 px-4 rounded-[40px] flex items-center justify-center transition duration-300';
+  const baseClasses = 'py-2 px-4 rounded-[40px] flex items-center justify-center transition duration-300 ';
   
   // تعیین رنگ متن بر اساس تم
   const textColor = theme === 'dark' ? 'text-white' : 'text-black';

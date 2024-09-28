@@ -1,6 +1,6 @@
 import Image from "next/image";
 import localFont from "next/font/local";
-import Herosection from "@/components/Herosection";
+import Herosection from "@/components/HeroSection/Herosection";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
