@@ -3,33 +3,33 @@
 @tailwind utilities;
 
 .shape {
-    width: 300px; /* اندازه بزرگ‌تر */
-    height: 280px; /* اندازه بزرگ‌تر */
-    filter: blur(20px); /* بلار بیشتر */
+    width: 300px; 
+    height: 280px; 
+    filter: blur(20px); 
 }
 .dark .shape {
-    filter: blur(100px); /* بلار در حالت تاریک */
+    filter: blur(100px); 
 }
 
 
 .shape1 {
-    animation: spin-slow 26s linear infinite; /* چرخش */
+    animation: spin-slow 26s linear infinite; 
 }
 
 .shape2 {
-    animation: scale 19s ease-in-out infinite; /* بزرگ و کوچک شدن */
+    animation: scale 19s ease-in-out infinite; 
 }
 
 .shape3 {
-    animation: spin-slow 21s linear infinite; /* چرخش */
+    animation: spin-slow 21s linear infinite;
 }
 
 .shape4 {
-    animation: spin-slow 13s linear infinite; /* چرخش */
+    animation: spin-slow 13s linear infinite; 
 }
 
 .shape5 {
-    animation: scale 15s ease-in-out infinite; /* بزرگ و کوچک شدن */
+    animation: scale 15s ease-in-out infinite; 
 }
 
 @keyframes spin-slow {
@@ -43,9 +43,9 @@
 
 @keyframes scale {
     0%, 100% {
-        transform: scale(1); /* اندازه اولیه */
+        transform: scale(1);
     }
     50% {
-        transform: scale(1.9); /* بزرگ شدن */
+        transform: scale(1.95); 
     }
 }

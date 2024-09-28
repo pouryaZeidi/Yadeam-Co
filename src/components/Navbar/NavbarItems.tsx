@@ -10,8 +10,11 @@ interface NavbarItemsProps {
 const NavbarItems: React.FC<NavbarItemsProps> = ({ href, className, children }) => {
   return (
     <Link href={href} className=''>
-      {/* ترکیب کلاس‌های پیش‌فرض برای دارک و لایت مود */}
-      <span className={`p-2 rounded-lg inset-0 z-40 text-primary1 hover: ${className}`}>
+      <span 
+        className={`p-2 rounded-[40px] z-40 text-primary1 transition duration-300 ease-in-out transform 
+        hover:bg-primary1 hover:text-white hover:shadow-lg hover:scale-105 
+        focus:outline-none focus:ring-2 focus:ring-primary3 ${className}`}
+      >
         {children}
       </span>
     </Link>
