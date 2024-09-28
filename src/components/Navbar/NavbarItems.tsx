@@ -11,7 +11,7 @@ const NavbarItems: React.FC<NavbarItemsProps> = ({ href, className, children }) 
   return (
     <Link href={href} className=''>
       <span 
-        className={`p-2 rounded-[40px] z-40 text-primary1 transition duration-300 ease-in-out transform 
+        className={`flex items-center justify-center w-[85px] h-10 p-2 rounded-[40px] z-40 text-primary1 transition duration-300 ease-in-out transform 
         hover:bg-primary1 hover:text-white hover:shadow-lg hover:scale-105 
         focus:outline-none focus:ring-2 focus:ring-primary3 ${className}`}
       >

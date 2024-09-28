@@ -15,7 +15,7 @@ const HamburgerMenu = () => {
     <>
       
       <CgMenuRound 
-        className={`sm:hidden text-4xl cursor-pointer ${theme === 'dark' ? 'text-primary1' : 'text-white'}`} 
+        className={`sm:hidden text-4xl hover:text-primary3 cursor-pointer ${theme === 'dark' ? 'text-primary1' : 'text-primary2'}`} 
         onClick={toggleMenu} 
       />
 
@@ -25,16 +25,16 @@ const HamburgerMenu = () => {
           
           <button 
             onClick={toggleMenu} 
-            className='absolute top-4 right-4 text-white text-4xl p-4'
+            className='absolute top-4 right-4 text-white text-1xl p-3 border bg-black bg-opacity-85 rounded-full '
           >
             X
           </button>
-          <div className='w-full h-[60%] flex flex-col justify-between items-center'>
-          <NavbarItems href={'/'} children={'Home'} />
-          <NavbarItems href={'/login'} children={'Login'} />
-          <NavbarItems href={'/signup'} children={'Sign Up'} />
-          <NavbarItems href={'/about'} children={'About Us'} />
-          <NavbarItems href={'/linkedin'} children={'LinkedIn'} />
+          <div className='w-full h-[50%] flex flex-col justify-between items-center'>
+          <NavbarItems href={'/'} children={'Home'} className='w-64' />
+          <NavbarItems href={'/about'} children={'About Us'} className='w-64' />
+          <NavbarItems href={'/linkedin'} children={'LinkedIn'} className='w-64' />
+          <NavbarItems href={'/signup'} children={'Sign Up'} className='w-64' />
+          <NavbarItems href={'/login'} children={'Login'} className='w-64' />
           </div>
         </div>
       )}
