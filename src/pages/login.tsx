@@ -10,24 +10,39 @@ import GoogleSignInButton from '@/components/Buttons/GoogleSignInButton';
 const Login = () => {
   const { theme } = useTheme();
   const [showPassword, setShowPassword] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false); // State for remember me
+  const [rememberMe, setRememberMe] = useState(false); 
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
   const handleRememberMeChange = () => {
-    setRememberMe(!rememberMe); // Toggle remember me state
+    setRememberMe(!rememberMe);
   };
 
   const backgroundImage = theme === 'dark' ? '/MainLogo1.jpg' : '/MainLogo.jpg';
+  const backgroundImageMobile = theme === 'dark' ? '/MainLogoMob1.jpg' : '/MainLogoMob2.jpg';
 
   return (
     <Layout>
       <div className="relative min-h-screen flex items-center justify-center">
         <div 
           className="absolute inset-0 bg-center min-h-screen bg-cover bg-no-repeat"
-          style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: '150%', backgroundPosition: 'center' }} 
+          style={{ 
+            backgroundImage: `url(${backgroundImage})`, 
+            backgroundSize: '150%',
+            backgroundRepeat: 'no-repeat', 
+            backgroundPosition: 'center' 
+          }}
+        ></div>
+        <div 
+          className="absolute inset-0 bg-center min-h-screen bg-cover bg-no-repeat sm:hidden"
+          style={{ 
+            backgroundImage: `url(${backgroundImageMobile})`,
+            backgroundSize: '150%',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+          }} 
         ></div>
         <div className="absolute inset-0 bg-black opacity-5"></div>
         <div className="relative text-black w-full max-w-[350px] md:py-5 mx-3 my-5 bg-black sm:px-5 shadow-smallShadow bg-opacity-10 backdrop-filter backdrop-blur-[14px] rounded-md flex flex-col p-3 space-y-4">
@@ -59,7 +74,6 @@ const Login = () => {
             </Link>
           </div>
 
-          {/* چک باکس برای به خاطر سپردن جزئیات */}
           <div className="flex items-center mb-4">
             <input 
               type="checkbox" 
@@ -80,7 +94,6 @@ const Login = () => {
             />
           </div>
 
-          {/* استفاده از کامپوننت دکمه گوگل */}
           <div className="mt-auto flex justify-center">
             <GoogleSignInButton onClick={() => console.log('Signing up with Google...')} txt={'Sign in with Google'} />
           </div>

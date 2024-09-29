@@ -32,7 +32,7 @@ const InputComponent: React.FC<InputComponentProps> = ({
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
-        className={`p-2 border-2 rounded h-[36px] mt-1 
+        className={`p-2 border-2 rounded h-[35px]  
           bg-transparent text-white placeholder:opacity-50 
           border-white placeholder:text-gray-400 
           dark:border-white dark:placeholder:text-gray-300 
