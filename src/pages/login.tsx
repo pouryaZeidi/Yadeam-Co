@@ -12,6 +12,8 @@ const Login = () => {
   const { theme } = useTheme();
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false); 
+  const [email, setEmail] = useState(''); // اضافه کردن state برای ایمیل
+  const [password, setPassword] = useState(''); // اضافه کردن state برای رمز عبور
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -19,6 +21,14 @@ const Login = () => {
 
   const handleRememberMeChange = () => {
     setRememberMe(!rememberMe);
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value); // به‌روزرسانی وضعیت ایمیل
+  };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value); // به‌روزرسانی وضعیت رمز عبور
   };
 
   const backgroundImage = theme === 'dark' ? '/MainLogo1.jpg' : '/MainLogo.jpg';
@@ -54,14 +64,23 @@ const Login = () => {
             <h2 className={`text-center text-[25px] font-bold ${textColor}`}>Login</h2>
             <img src="/YadeamLogo.png" alt="Yadeam Logo" className="w-[50px] bg-transparent sm:w-[60px] opacity-80"/>
           </div>
-          <InputComponent type="email" placeholder="Enter your email" label="Email" className="w-full max-w-[400px]" value={''}/>
+          <InputComponent 
+            type="email" 
+            placeholder="Enter your email" 
+            label="Email" 
+            className="w-full max-w-[400px]" 
+            value={email} 
+            onChange={handleEmailChange} // اتصال به تابع به‌روزرسانی
+          />
 
           <div className='relative w-full h-[60px] flex items-center'>
             <InputComponent 
               type={showPassword ? "text" : "password"}
               placeholder="Enter your password"
               label="Password"
-              className="w-full max-w-[400px]" value={''} 
+              className="w-full max-w-[400px]" 
+              value={password} 
+              onChange={handlePasswordChange} // اتصال به تابع به‌روزرسانی
             />
             <button 
               type="button" 

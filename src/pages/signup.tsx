@@ -14,6 +14,12 @@ const Signup = () => {
   
   const [selectedRole, setSelectedRole] = useState<string | null>(null); 
 
+  // State برای ورودی‌ها
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -53,11 +59,32 @@ const Signup = () => {
             <h2 className={`text-center text-[25px] font-bold ${textColor}`}>Sign Up</h2>
             <img src="/YadeamLogo.png" alt="Yadeam Logo" className="w-[50px] bg-transparent sm:w-[60px] opacity-80"/>
           </div>
-          <InputComponent type="text" placeholder="Enter Full Name or Company Name" label="Full Name or Company Name" className="w-full max-w-[400px] h-[35px]" value={''} />
-          <InputComponent type="email" placeholder="Enter your Email" label="Email" className="w-full max-w-[400px] h-[35px]" value={''} />
+          <InputComponent 
+            type="text" 
+            placeholder="Enter Full Name or Company Name" 
+            label="Full Name or Company Name" 
+            className="w-full max-w-[400px] h-[35px]" 
+            value={fullName} 
+            onChange={(e) => setFullName(e.target.value)} // تنظیم مقدار state
+          />
+          <InputComponent 
+            type="email" 
+            placeholder="Enter your Email" 
+            label="Email" 
+            className="w-full max-w-[400px] h-[35px]" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} // تنظیم مقدار state
+          />
           
           <div className='relative w-full h-[55px] flex items-center'>
-            <InputComponent type={showPassword ? "text" : "password"} placeholder="Enter your password" label="Password" className="w-full max-w-[400px] h-[35px]" value={''} />
+            <InputComponent 
+              type={showPassword ? "text" : "password"} 
+              placeholder="Enter your password" 
+              label="Password" 
+              className="w-full max-w-[400px] h-[35px]" 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} // تنظیم مقدار state
+            />
             <button 
               type="button"
               onClick={togglePasswordVisibility}
@@ -68,7 +95,14 @@ const Signup = () => {
           </div>
 
           <div className='relative w-full h-[55px] flex items-center'>
-            <InputComponent type={showPassword ? "text" : "password"} placeholder="Confirm password" label="Confirm Password" className="w-full max-w-[400px] h-[35px]" value={''} />
+            <InputComponent 
+              type={showPassword ? "text" : "password"} 
+              placeholder="Confirm password" 
+              label="Confirm Password" 
+              className="w-full max-w-[400px] h-[35px]" 
+              value={confirmPassword} 
+              onChange={(e) => setConfirmPassword(e.target.value)} // تنظیم مقدار state
+            />
             <button 
               type="button"
               onClick={togglePasswordVisibility}
@@ -78,7 +112,6 @@ const Signup = () => {
             </button>
           </div>
 
-          
           <div className="flex justify-between space-x-2">
             <label className={`flex items-center ${textColor}`}>
               <input 
@@ -118,7 +151,6 @@ const Signup = () => {
           <div className="mt-4 flex flex-col space-y-4"> 
             <GoogleSignInButton onClick={() => console.log('Signing up with Google...')} txt={'Sign Up with Google'} />
 
-            
             <button
               onClick={handleAppleSignUp}
               className="bg-black border border-white text-white w-full flex items-center justify-center space-x-2 transform hover:scale-105 transition-transform duration-200 py-2 rounded-[40px]"
