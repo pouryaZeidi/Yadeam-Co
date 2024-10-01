@@ -1,28 +1,32 @@
-// components/CustomButton.tsx
+// CustomButton.tsx
 import React from 'react';
 
 interface CustomButtonProps {
+  type?: 'button' | 'submit' | 'reset';
   text: string;
-  onClick: () => void;
-  className?: string;  // کلاس‌های اضافی
-  icon?: React.ReactNode;  // آیکون یا محتوای اضافی
-  theme?: 'light' | 'dark';  // نوع تم
+  onClick?: () => void;
+  theme: string;
+  className?: string;
 }
 
-const CustomButton: React.FC<CustomButtonProps> = ({ text, onClick, className = '', icon, theme = 'light' }) => {
-  // کلاس‌های ثابت
-  const baseClasses = 'py-2 px-4 rounded-[40px] flex items-center justify-center transition duration-300 ';
-  
-  // تعیین رنگ متن بر اساس تم
-  const textColor = theme === 'dark' ? 'text-white' : 'text-black';
-  
+const CustomButton: React.FC<CustomButtonProps> = ({ type = 'button', text, onClick, theme, className }) => {
+  const buttonStyles = `
+    w-full 
+    bg-blue-500 
+    text-white 
+    py-2 
+    rounded-[40px] 
+    hover:bg-blue-600 
+    transition 
+    duration-200 
+    transform 
+    hover:scale-105 
+    ${className}
+  `;
+
   return (
-    <button 
-      onClick={onClick} 
-      className={`${baseClasses} ${textColor} ${className}`}
-    >
-      {icon && <span className="mr-2">{icon}</span>} 
-      <span>{text}</span>
+    <button type={type} onClick={onClick} className={buttonStyles}>
+      {text}
     </button>
   );
 };
