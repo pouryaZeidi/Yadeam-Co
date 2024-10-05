@@ -53,7 +53,6 @@ const ForgotPassword: React.FC = () => {
           <p className={`${textColor} text-center mb-4`}>
             Please enter your email address to receive a password reset link.
           </p>
-          
           <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
             <InputComponent 
               type="email" 
@@ -66,7 +65,7 @@ const ForgotPassword: React.FC = () => {
             <div className="flex justify-center">
               <CustomButton 
                 type="submit" 
-                text="Send Reset Link" 
+                text="Reset Password" 
                 theme={theme} 
                 className="" 
               />
