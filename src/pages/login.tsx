@@ -122,11 +122,11 @@ const Login = () => {
             />
             </div>
 
-            {/* لینک جدید Sign Up */}
+            
             <div className="flex justify-center mt-6">
               <p className={`${textColor} text-sm`}>
                 Don't have an account?{" "}
-                <Link href="/sign-up" className="text-blue-500 hover:underline">
+                <Link href={'/signup'} className="text-blue-500 hover:underline">
                   Sign Up
                 </Link>
               </p>

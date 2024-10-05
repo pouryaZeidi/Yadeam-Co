@@ -15,18 +15,42 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [investor, setInvestor] = useState(false);
+  const [company, setCompany] = useState(false);
+  const [error, setError] = useState('');
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
   const handleSignup = () => {
+    // Reset error message
+    setError('');
+
+    // Basic validation
+    if (!fullName || !email || !password || !confirmPassword) {
+      setError('Please fill in all fields.');
+      return;
+    }
+    if (password !== confirmPassword) {
+      setError('Passwords do not match.');
+      return;
+    }
+    if (!investor && !company) {
+      setError('Please select at least one option: Investor or Company.');
+      return;
+    }
+
     console.log('Signing up with:', {
       fullName,
       email,
       password,
       confirmPassword,
+      investor,
+      company
     });
+
+    // Here you can add your signup logic, like an API call
   };
 
   const backgroundImageRight = theme === 'dark' ? '/Yadeam1.jpg' : '/Yadeam2.jpg';
@@ -52,6 +76,8 @@ const Signup = () => {
         <div className="absolute w-full sm:w-1/2 sm:left-0 min-h-screen flex items-center justify-center p-5">
           <div className={`relative w-full max-w-[450px] bg-black bg-opacity-10 shadow-smallShadow backdrop-filter backdrop-blur-[14px] rounded-md flex flex-col p-6 space-y-4`}>
             <h2 className={`text-left text-[25px] font-bold ${textColor}`}>Sign Up</h2>
+
+            {error && <div className="text-red-500 mb-2">{error}</div>}
 
             <InputComponent
               type="text"
@@ -106,8 +132,40 @@ const Signup = () => {
                 {showPassword ? <RiEyeCloseLine /> : <RiEyeLine />}
               </button>
             </div>
+
+            <div className="flex items-center space-x-4 mt-4">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="investor"
+                  checked={investor}
+                  onChange={() => {
+                    setInvestor(!investor);
+                    // If investor is selected, uncheck company
+                    if (!investor) setCompany(false);
+                  }}
+                  className="form-checkbox h-5 w-5 text-primary3 rounded-full border-2"
+                />
+                <label htmlFor="investor" className={`ml-2 ${textColor}`}>Investor</label>
+              </div>
+
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="company"
+                  checked={company}
+                  onChange={() => {
+                    setCompany(!company);
+                    // If company is selected, uncheck investor
+                    if (!company) setInvestor(false);
+                  }}
+                  className="form-checkbox h-5 w-5 text-primary3 rounded-full border-2"
+                />
+                <label htmlFor="company" className={`ml-2 ${textColor}`}>Company</label>
+              </div>
+            </div>
             
-            <div className='flex justify-center'>
+            <div className='flex justify-center mt-4'>
               <CustomButton
                 onClick={handleSignup}
                 text="Sign Up"
