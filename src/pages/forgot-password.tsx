@@ -20,7 +20,7 @@ const ForgotPassword: React.FC = () => {
 
   const textColor = theme === 'dark' ? 'text-black' : 'text-white';
   const signatures = theme === 'dark' ? 'text-primary1' : 'text-primary3';
-  const backgroundImage = theme === 'dark' ? '/MainLogo1.jpg' : '/MainLogo.jpg';
+  const backgroundImage = theme === 'dark' ? '/Mainforget2.jpg' : '/Mainforget1.jpg';
   const backgroundImageMobile = theme === 'dark' ? '/MainLogoMob1.jpg' : '/MainLogoMob2.jpg';
 
   return (
@@ -31,7 +31,7 @@ const ForgotPassword: React.FC = () => {
           className="absolute inset-0 bg-center min-h-screen bg-cover bg-no-repeat"
           style={{ 
             backgroundImage: `url(${backgroundImage})`, 
-            backgroundSize: '150%',
+            backgroundSize: '160%',
             backgroundRepeat: 'no-repeat', 
             backgroundPosition: 'center' 
           }}
