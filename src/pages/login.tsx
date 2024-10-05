@@ -42,25 +42,25 @@ const Login = () => {
     <Layout>
       <div className="relative min-h-screen flex flex-col sm:flex-row">
         
-       
         <div
           className="w-full sm:w-1/2 min-h-screen bg-center bg-cover"
           style={{ backgroundImage: `url(${backgroundImageLeft})` }}
         ></div>
-        
         
         <div
           className="hidden sm:block w-1/2 min-h-screen bg-center bg-cover"
           style={{ backgroundImage: `url(${backgroundImageRight})` }}
         ></div>
 
-        
         <div className="absolute w-full sm:w-1/2 sm:left-0 min-h-screen flex items-center justify-center p-5">
           <div className={`relative w-full max-w-[450px] bg-black bg-opacity-10 shadow-smallShadow backdrop-filter backdrop-blur-[14px] rounded-md flex flex-col p-6 space-y-4`}>
-            <div className="flex justify-between items-center w-[100%]">
-              <h2 className={`text-center text-[25px] font-bold ${textColor}`}>Login</h2>
-              <img src="/YadeamLogo.png" alt="Yadeam Logo" className="w-[50px] bg-transparent sm:w-[60px] opacity-80"/>
+            
+            {/* Welcome Back و متن جدید از سمت چپ */}
+            <div className="flex flex-col w-[100%]">
+              <h2 className={`text-left text-[32px] font-bold ${textColor}`}>Welcome Back!</h2>
+              <p className={`text-left text-[16px] mt-2 ${textColor}`}>Please enter your details.</p>
             </div>
+
             <InputComponent
               type="email"
               placeholder="Enter your email"
@@ -81,21 +81,21 @@ const Login = () => {
               />
             </div>
 
-            <div className="w-full text-right mt-2">
-              <Link href="/forgot-password" className={`${signatures} hover:underline inline-block mb-10 text-[15px]`}>
+            {/* ریممبر می و فرگت پسورد در یک خط */}
+            <div className="w-full flex items-center justify-between mt-2">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="rememberMe"
+                  checked={rememberMe}
+                  onChange={handleRememberMeChange}
+                  className="mr-2"
+                />
+                <label htmlFor="rememberMe" className={`${textColor} text-sm`}>Remember Me</label>
+              </div>
+              <Link href="/forgot-password" className={`${signatures} hover:underline text-[15px]`}>
                 Forgot Password?
               </Link>
-            </div>
-
-            <div className="flex items-center mb-4">
-              <input
-                type="checkbox"
-                id="rememberMe"
-                checked={rememberMe}
-                onChange={handleRememberMeChange}
-                className="mr-2"
-              />
-              <label htmlFor="rememberMe" className={`${textColor} text-sm`}>Remember Me</label>
             </div>
 
             <div className='flex justify-center'>
@@ -111,15 +111,25 @@ const Login = () => {
               <GoogleSignInButton 
                 onClick={() => console.log('Signing in with Google...')} 
                 txt={'Sign in with Google'} 
-                theme={theme} // اضافه کردن prop تم
+                theme={theme} 
               />
             </div>
 
             <div className='flex justify-center mt-4'>
             <AppleButton 
               onClick={() => console.log('Signing in with Apple...')} 
-              theme={theme} // اضافه کردن prop تم
+              theme={theme} 
             />
+            </div>
+
+            {/* لینک جدید Sign Up */}
+            <div className="flex justify-center mt-6">
+              <p className={`${textColor} text-sm`}>
+                Don't have an account?{" "}
+                <Link href="/sign-up" className="text-blue-500 hover:underline">
+                  Sign Up
+                </Link>
+              </p>
             </div>
 
             <Link href="/" className={`${signatures} duration-500 border border-transparent text-center hover:border hover:border-primary3 rounded-[40px] p-1`}>

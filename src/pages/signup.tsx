@@ -51,10 +51,7 @@ const Signup = () => {
 
         <div className="absolute w-full sm:w-1/2 sm:left-0 min-h-screen flex items-center justify-center p-5">
           <div className={`relative w-full max-w-[450px] bg-black bg-opacity-10 shadow-smallShadow backdrop-filter backdrop-blur-[14px] rounded-md flex flex-col p-6 space-y-4`}>
-            <div className="flex justify-between items-center w-[100%]">
-              <h2 className={`text-center text-[25px] font-bold ${textColor}`}>Sign Up</h2>
-              <img src="/YadeamLogo.png" alt="Yadeam Logo" className="w-[50px] bg-transparent sm:w-[60px] opacity-80"/>
-            </div>
+            <h2 className={`text-left text-[25px] font-bold ${textColor}`}>Sign Up</h2>
 
             <InputComponent
               type="text"
@@ -123,7 +120,7 @@ const Signup = () => {
               <GoogleSignInButton 
                 onClick={() => console.log('Signing in with Google...')} 
                 txt={'Sign up with Google'} 
-                theme={theme} // Pass the theme prop
+                theme={theme} 
               />
             </div>
 
