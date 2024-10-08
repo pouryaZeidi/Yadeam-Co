@@ -22,10 +22,10 @@ const InvestmentCard: React.FC<InvestmentCardProps> = ({
   targetAmount,
   backers,
   type,
-  tags, 
+  tags = [],
 }) => {
   return (
-    <div className="w-full max-w-[400px] border border-black rounded-lg p-4 shadow-navshadow bg-white backdrop-blur-[40px] bg-opacity-70"> {/* کاهش اپاسیتی به 80% */}
+    <div className="w-full max-w-[450px] border border-black rounded-lg p-2 shadow-navshadow bg-white backdrop-blur-[40px] bg-opacity-70">
       <img src={src} alt="Card Image" className="w-full h-48 object-cover rounded-lg mb-4" />
 
       <div className="flex items-center mb-2">
@@ -33,24 +33,24 @@ const InvestmentCard: React.FC<InvestmentCardProps> = ({
         <span className="ml-2 text-gray-600">{subtitle}</span>
       </div>
 
-      <div className="text-wrap mb-4">{description}</div>    
-      
-      
-      {tags && tags.length > 0 && (
+      <div className="text-wrap mb-4">{description}</div>
+
+     
+      {tags.length > 0 && (
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-blue-100 text-blue-800 text-sm font-semibold px-2 py-1 rounded-lg"
+              className="bg-gray-400 text-gray-900 text-sm font-semibold px-2 py-1 rounded-lg"
             >
               {tag}
             </span>
           ))}
         </div>
       )}
+
       
-      {/* RaiseBox */}
-      <RaiseBox raisedAmount={raisedAmount} targetAmount={targetAmount} backers={backers} type={type} />
+      <RaiseBox raisedAmount={raisedAmount} targetAmount={targetAmount} backers={backers} />
     </div>
   );
 };

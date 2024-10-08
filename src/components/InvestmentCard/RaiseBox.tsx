@@ -1,32 +1,31 @@
 interface RaiseBoxProps {
-    raisedAmount: number;
-    targetAmount: number;
-    backers: number;
-    type: string;
-  }
-  
-  const RaiseBox: React.FC<RaiseBoxProps> = ({ raisedAmount, targetAmount, backers, type }) => {
-    const percentageRaised = Math.round((raisedAmount / targetAmount) * 100);
-  
-    return (
-      <div className="bg-blue-500 text-white p-4 rounded-lg mt-4">
-        <div className="flex justify-between items-center mb-2">
-          <span>Raised: ${raisedAmount}</span>
-          <span>{percentageRaised}%</span>
-        </div>
-        <div className="w-full bg-gray-300 rounded-full h-2.5 mb-2">
-          <div
-            className="bg-blue-800 h-2.5 rounded-full"
-            style={{ width: `${percentageRaised}%` }}
-          ></div>
-        </div>
-        <div className="flex justify-between items-center text-sm">
-          <span>Target: ${targetAmount}</span>
-          <span>{backers} Backers</span>
-        </div>
+  raisedAmount: number;
+  targetAmount: number;
+  backers: number;
+}
+
+const RaiseBox: React.FC<RaiseBoxProps> = ({ raisedAmount, targetAmount, backers }) => {
+  const percentageRaised = Math.round((raisedAmount / targetAmount) * 100);
+
+  return (
+    <div className="bg-primary1 p-3 rounded-lg mt-2 shadow-md w-full">
+     
+      <div className="flex justify-between items-center mb-2">
+        <span className="text-[19px] text-white font-bold">£{raisedAmount} Raised</span>
+        <span className="text-sm text-white">
+          {backers} Backers | {percentageRaised}% of Target Raised
+        </span>
       </div>
-    );
-  };
-  
-  export default RaiseBox;
-  
+
+     
+      <div className="w-full bg-primary1 flex items-center  h-[25px] rounded-full border-2 border-white">
+        <div
+          className="bg-white  border-2  h-[24px] rounded-full"
+          style={{ width: `${percentageRaised}%` }}
+        ></div>
+      </div>
+    </div>
+  );
+};
+
+export default RaiseBox;

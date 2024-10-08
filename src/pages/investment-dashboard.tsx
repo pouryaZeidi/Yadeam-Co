@@ -20,10 +20,48 @@ const InvestmentDashboard = () => {
   };
 
   const cardData = [
-    { src: '/yadeam2.jpg', title: 'Project 1', subtitle: 'Category 1', description: 'Description for Project 1', tags: ['Tech', 'Startup'] },
-    { src: '/yadeam1.jpg', title: 'Project 2', subtitle: 'Category 2', description: 'Description for Project 2', tags: ['Health', 'Innovation'] },
-    { src: '/yadeam2.jpg', title: 'Project 3', subtitle: 'Category 3', description: 'Description for Project 3', tags: ['Energy', 'Sustainability'] },
-    { src: '/yadeam1.jpg', title: 'Project 4', subtitle: 'Category 4', description: 'Description for Project 4', tags: ['Finance', 'Growth'] }
+    {
+      src: '/yadeam2.jpg',
+      title: 'Project 1',
+      subtitle: 'Country 1',
+      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. At repudiandae non sunt, fuga inventore odit!',
+      tags: ['Tech', 'Startup'],
+      raisedAmount: 500,  
+      targetAmount: 1000, 
+      backers: 10,        
+    },
+    
+    {
+      src: '/yadeam1.jpg',
+      title: 'Project 2',
+      subtitle: 'Country 2',
+      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. At repudiandae non sunt, fuga inventore odit!',
+      tags: ['Health', 'Innovation'],
+      raisedAmount: 300,  
+      targetAmount: 800,  
+      backers: 5,        
+    },
+    
+    {
+      src: '/yadeam2.jpg',
+      title: 'Project 3',
+      subtitle: 'Country 3',
+      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. At repudiandae non sunt, fuga inventore odit!',
+      tags: ['Energy', 'Sustainability'],
+      raisedAmount: 700,  
+      targetAmount: 1500, 
+      backers: 15,       
+    },
+    {
+      src: '/yadeam1.jpg',
+      title: 'Project 4',
+      subtitle: 'Country 4',
+      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. At repudiandae non sunt, fuga inventore odit!',
+      tags: ['Finance', 'Growth'],
+      raisedAmount: 200,  
+      targetAmount: 600,  
+      backers: 8,        
+    },
   ];
 
   return (
@@ -33,7 +71,7 @@ const InvestmentDashboard = () => {
         <img 
           src="/stem.jpg" 
           alt="photo1" 
-          className='w-full h-full object-cover opacity-70 shadow-navshadow' 
+          className='w-full h-full object-cover object-right opacity-70 shadow-navshadow' 
         />
         <div className='absolute w-full h-full top-0 left-0 bg-white opacity-70' /> 
 
@@ -69,25 +107,27 @@ const InvestmentDashboard = () => {
         </div>
       </div>
       
-      <div className='h-[100vh] bg-center bg-cover' style={{ backgroundImage: "url('/Logo11.jpg')" }}>
-        <div className='flex items-center justify-center h-full backdrop-blur-md'>
-          <div className='container mx-auto py-8 flex justify-center relative'>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-[900px]'>
-              {cardData.map((card, index) => (
+      <div className='min-h-[100vh] bg-center bg-cover' style={{ backgroundImage: "url('/Logo11.jpg')" }}>
+        <div className='flex items-center lg:w-[70%] md:w-[85%] sm:w-[95%]  m-auto justify-center h-full backdrop-blur-sm'>
+          <div className='container mx-auto py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 px-4 sm:px-0'>
+            {cardData.map((card, index) => (
+              <div 
+                key={index} 
+                className='w-full max-w-[450px] m-auto p-4 rounded-lg'
+              >
                 <InvestmentCard
-                  key={index}
                   src={card.src}
                   title={card.title}
                   subtitle={card.subtitle}
                   description={card.description}
                   tags={card.tags}
-                  raisedAmount={0}
-                  targetAmount={0}
-                  backers={0}
+                  raisedAmount={card.raisedAmount} 
+                  targetAmount={card.targetAmount}  
+                  backers={card.backers}           
                   type={''}
                 />
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
