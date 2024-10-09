@@ -1,4 +1,4 @@
-import { TfiApple } from "react-icons/tfi";
+import { BiLogoApple } from "react-icons/bi";
 
 const AppleButton: React.FC<{ onClick: () => void; theme: string }> = ({ onClick, theme }) => {
   const buttonClass = theme === 'dark' 
@@ -7,7 +7,7 @@ const AppleButton: React.FC<{ onClick: () => void; theme: string }> = ({ onClick
 
   return (
     <button onClick={onClick} className={buttonClass}>
-      <TfiApple className="text-xl" />
+      <BiLogoApple className="text-2xl" />
       <span>{'Sign in with Apple'}</span>
     </button>
   );

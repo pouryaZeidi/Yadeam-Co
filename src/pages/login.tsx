@@ -4,9 +4,7 @@ import Link from 'next/link';
 import Layout from '@/layout/Layout';
 import CustomButton from '@/components/Buttons/CustomButton';
 import { useTheme } from '@/components/Theme/ThemeContext';
-import { RiEyeCloseLine, RiEyeLine } from "react-icons/ri";
 import GoogleSignInButton from '@/components/Buttons/GoogleSignInButton';
-import { TfiApple } from "react-icons/tfi";
 import AppleButton from '@/components/Buttons/Applebutton';
 
 const Login = () => {
@@ -33,7 +31,7 @@ const Login = () => {
   };
 
   const backgroundImageRight = theme === 'dark' ? '/Yadeam1.jpg' : '/Yadeam2.jpg';
-  const backgroundImageLeft = theme === 'dark' ? '/MainLogo1-2.jpg' : '/MainLogo2-1.jpg';
+  const backgroundImageLeft = theme === 'dark' ? '/MainLogo1-2.png' : '/MainLogo2-1.png';
 
   const textColor = theme === 'dark' ? 'text-black' : 'text-white';
   const signatures = theme === 'dark' ? 'text-primary1' : 'text-primary3';
@@ -55,7 +53,6 @@ const Login = () => {
         <div className="absolute w-full sm:w-1/2 sm:left-0 min-h-screen flex items-center justify-center p-5">
           <div className={`relative w-full max-w-[450px] bg-black bg-opacity-10 shadow-smallShadow backdrop-filter backdrop-blur-[14px] rounded-md flex flex-col p-6 space-y-4`}>
             
-            {/* Welcome Back و متن جدید از سمت چپ */}
             <div className="flex flex-col w-[100%]">
               <h2 className={`text-left text-[32px] font-bold ${textColor}`}>Welcome Back!</h2>
               <p className={`text-left text-[16px] mt-2 ${textColor}`}>Please enter your details.</p>
@@ -81,7 +78,7 @@ const Login = () => {
               />
             </div>
 
-            {/* ریممبر می و فرگت پسورد در یک خط */}
+           
             <div className="w-full flex items-center justify-between mt-2">
               <div className="flex items-center">
                 <input

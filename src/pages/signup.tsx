@@ -5,7 +5,7 @@ import Layout from '@/layout/Layout';
 import CustomButton from '@/components/Buttons/CustomButton';
 import { useTheme } from '@/components/Theme/ThemeContext'; 
 import GoogleSignInButton from '@/components/Buttons/GoogleSignInButton';
-import { TfiApple } from "react-icons/tfi"; 
+import { BiLogoApple } from "react-icons/bi";
 import { RiEyeCloseLine, RiEyeLine } from "react-icons/ri";
 
 const Signup = () => {
@@ -54,7 +54,7 @@ const Signup = () => {
   };
 
   const backgroundImageRight = theme === 'dark' ? '/Yadeam1.jpg' : '/Yadeam2.jpg';
-  const backgroundImageLeft = theme === 'dark' ? '/MainLogo1-2.jpg' : '/MainLogo2-1.jpg';
+  const backgroundImageLeft = theme === 'dark' ? '/MainLogo1-2.png' : '/MainLogo2-1.png';
 
   const textColor = theme === 'dark' ? 'text-black' : 'text-white';
   const signatures = theme === 'dark' ? 'text-primary1' : 'text-primary3';
@@ -189,7 +189,7 @@ const Signup = () => {
                   theme === 'dark' ? 'bg-black border border-white text-white' : 'bg-white border border-gray-300 text-black'
                 }`}
               >
-                <TfiApple className={`${theme === 'dark' ? 'text-white' : 'text-black'}`} />
+                <BiLogoApple  className={`${theme === 'dark' ? 'text-white' : 'text-black'} text-2xl` } />
                 <span>Sign up with Apple</span>
               </button>
             </div>

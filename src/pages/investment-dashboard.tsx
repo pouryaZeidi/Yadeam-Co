@@ -107,8 +107,8 @@ const InvestmentDashboard = () => {
         </div>
       </div>
       
-      <div className='min-h-[100vh] bg-center bg-cover' style={{ backgroundImage: "url('/Logo11.jpg')" }}>
-        <div className='flex items-center lg:w-[70%] md:w-[85%] sm:w-[95%]  m-auto justify-center h-full backdrop-blur-sm'>
+      <div className='min-h-[100vh] bg-center bg-cover backdrop:blur-md ' style={{ backgroundImage: "url('/Logo11.png')" }}>
+        <div className='flex items-center lg:w-[70%] md:w-[85%] sm:w-[95%]  m-auto justify-center h-full backdrop-blur-md'>
           <div className='container mx-auto py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 px-4 sm:px-0'>
             {cardData.map((card, index) => (
               <div 
