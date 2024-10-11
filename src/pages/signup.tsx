@@ -5,7 +5,7 @@ import Layout from '@/layout/Layout';
 import CustomButton from '@/components/Buttons/CustomButton';
 import { useTheme } from '@/components/Theme/ThemeContext'; 
 import GoogleSignInButton from '@/components/Buttons/GoogleSignInButton';
-import { BiLogoApple } from "react-icons/bi";
+import AppleButton from '@/components/Buttons/Applebutton'; // Import AppleButton
 import { RiEyeCloseLine, RiEyeLine } from "react-icons/ri";
 
 const Signup = () => {
@@ -73,9 +73,9 @@ const Signup = () => {
           style={{ backgroundImage: `url(${backgroundImageRight})` }}
         ></div>
 
-        <div className="absolute w-full sm:w-1/2 sm:left-0 min-h-screen flex items-center justify-center p-5">
+        <div className="absolute w-full sm:w-1/2 sm:left-0  flex items-center justify-center p-1 sm:p-4">
           <div className={`relative w-full max-w-[450px] bg-black bg-opacity-10 shadow-smallShadow backdrop-filter backdrop-blur-[14px] rounded-md flex flex-col p-6 space-y-4`}>
-            <h2 className={`text-left text-[25px] font-bold ${textColor}`}>Sign Up</h2>
+            <h2 className={`text-left ml-9 sm:ml-0 text-[20px] sm:text-[25px] font-bold ${textColor}`}>Sign Up</h2>
 
             {error && <div className="text-red-500 mb-2">{error}</div>}
 
@@ -133,7 +133,7 @@ const Signup = () => {
               </button>
             </div>
 
-            <div className="flex items-center space-x-4 mt-4">
+            <div className="flex flex-col sm:flex-row items-start space-y-2 sm:space-y-0 sm:space-x-4 mt-4">
               <div className="flex items-center">
                 <input
                   type="checkbox"
@@ -144,7 +144,7 @@ const Signup = () => {
                     // If investor is selected, uncheck company
                     if (!investor) setCompany(false);
                   }}
-                  className="form-checkbox h-5 w-5 text-primary3 rounded-full border-2"
+                  className="form-checkbox h-4 w-4 text-primary3 rounded border-2"
                 />
                 <label htmlFor="investor" className={`ml-2 ${textColor}`}>Investor</label>
               </div>
@@ -159,7 +159,7 @@ const Signup = () => {
                     // If company is selected, uncheck investor
                     if (!company) setInvestor(false);
                   }}
-                  className="form-checkbox h-5 w-5 text-primary3 rounded-full border-2"
+                  className="form-checkbox h-4 w-4 text-primary3 rounded border-2"
                 />
                 <label htmlFor="company" className={`ml-2 ${textColor}`}>Company</label>
               </div>
@@ -183,15 +183,10 @@ const Signup = () => {
             </div>
 
             <div className='flex justify-center mt-4'>
-              <button
-                onClick={() => console.log('Signing up with Apple...')}
-                className={`flex items-center justify-center w-full space-x-2 transform hover:scale-105 transition-transform duration-200 py-2 rounded-[40px] ${
-                  theme === 'dark' ? 'bg-black border border-white text-white' : 'bg-white border border-gray-300 text-black'
-                }`}
-              >
-                <BiLogoApple  className={`${theme === 'dark' ? 'text-white' : 'text-black'} text-2xl` } />
-                <span>Sign up with Apple</span>
-              </button>
+              <AppleButton 
+                onClick={() => console.log('Signing in with Apple...')} 
+                theme={theme} 
+              />
             </div>
 
             <Link href="/login" className={`${signatures} duration-500 border border-transparent text-center hover:border hover:border-primary3 rounded-[40px] p-1`}>

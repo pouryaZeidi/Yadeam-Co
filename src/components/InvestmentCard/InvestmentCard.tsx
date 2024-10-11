@@ -25,7 +25,7 @@ const InvestmentCard: React.FC<InvestmentCardProps> = ({
   tags = [],
 }) => {
   return (
-    <div className="w-full max-w-[450px] border border-black rounded-lg p-2 shadow-navshadow bg-white backdrop-blur-[40px] bg-opacity-70">
+    <div className="w-full max-w-[450px] hover:scale-[102%] cursor-pointer transition-all duration-150 border border-black rounded-lg p-2 shadow-navshadow bg-white backdrop-blur-[40px] bg-opacity-70">
       <img src={src} alt="Card Image" className="w-full h-48 object-cover rounded-lg mb-4" />
 
       <div className="flex items-center mb-2">

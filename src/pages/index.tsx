@@ -1,6 +1,7 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 import Herosection from "@/components/HeroSection/Herosection";
+import Footer from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,6 +19,7 @@ export default function Home() {
     
       <main>
         <Herosection/>
+        <Footer/>
       </main>
        
   );
