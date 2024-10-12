@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className='hidden sm:w-[75%] m-auto sm:flex justify-between items-center'>
           <NavbarItems href={'/'} children={'Home'} />
           <NavbarItems href={'/about'} children={'About Us'} />
-          <NavbarItems href={'/investment-dashboard'} children={'Investment'} />
+          <NavbarItems href={'/investment-dashboard'} children={'Investment'} className='!text-[15px]'  />
           <NavbarItems href={'https://www.linkedin.com/company/yadeam/posts/?feedView=all'} children={'LinkedIn'} />
           <NavbarItems href={'/signup'} children={'Sign Up'} />
           <NavbarItems href={'/login'} children={'Login'} />

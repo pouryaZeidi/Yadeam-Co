@@ -3,23 +3,23 @@ import React from 'react';
 import { CiSearch } from 'react-icons/ci';
 
 interface SearchInputProps {
-  placeholder?: string; // مقدار پیش‌فرض placeholder
-  value: string; // مقدار اینپوت
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; // هندلر برای تغییرات اینپوت
-  onSearchClick?: () => void; // هندلر برای کلیک روی دکمه سرچ
-  inputClassName?: string; // کلاس‌های اختصاصی برای اینپوت
-  buttonClassName?: string; // کلاس‌های اختصاصی برای دکمه
-  icon?: React.ReactNode; // آیکون قابل تغییر برای دکمه
+  placeholder?: string; 
+  value: string; 
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void; 
+  onSearchClick?: () => void; 
+  inputClassName?: string; 
+  buttonClassName?: string; 
+  icon?: React.ReactNode; 
 }
 
 const SearchInput: React.FC<SearchInputProps> = ({
-  placeholder = 'Search...', // مقدار پیش‌فرض placeholder
+  placeholder = 'Search...', 
   value,
   onChange,
   onSearchClick,
-  inputClassName = '', // مقدار پیش‌فرض خالی برای کلاس اینپوت
-  buttonClassName = '', // مقدار پیش‌فرض خالی برای کلاس دکمه
-  icon = <CiSearch className="w-5 h-5" />, // مقدار پیش‌فرض آیکون
+  inputClassName = '', 
+  buttonClassName = '', 
+  icon = <CiSearch className="w-5 h-5" />, 
 }) => {
   return (
     <div className="flex w-full items-center border border-black rounded-lg">
@@ -32,9 +32,9 @@ const SearchInput: React.FC<SearchInputProps> = ({
       />
       <button
         className={`p-2  hover:text-primary1 transition-all ease-in-out duration-150 rounded-r-lg ${buttonClassName}`} // کلاس‌ها به دکمه اضافه می‌شوند
-        onClick={onSearchClick} // فراخوانی تابع کلیک
+        onClick={onSearchClick} 
       >
-        {icon} {/* آیکون قابل تغییر */}
+        {icon} 
       </button>
     </div>
   );
