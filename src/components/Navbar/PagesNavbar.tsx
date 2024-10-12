@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const InvestmentNavbar = () => {
+const PagesNavbar = () => {
   return (
     <div className='w-full h-24 bg-white flex py-4  shadow-navshadow'>
       <div className='flex w-full sm:w-[80%] m-auto justify-between items-center'>
@@ -21,4 +21,4 @@ const InvestmentNavbar = () => {
   );
 }
 
-export default InvestmentNavbar;
+export default PagesNavbar;

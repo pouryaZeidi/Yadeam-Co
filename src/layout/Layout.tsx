@@ -1,11 +1,10 @@
-// Layout.tsx
 import React from 'react';
 import ThemeButton from '@/components/Theme/ThemeButton';
 import { useRouter } from 'next/router';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const router = useRouter();
-  const hiddenRoutes = ['/investment-dashboard', '/raise'];
+  const hiddenRoutes = ['/investment-dashboard', '/raise', '/campaignpage'];
   const isHiddenRoute = hiddenRoutes.includes(router.pathname);
 
   return (

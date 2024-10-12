@@ -9,7 +9,7 @@ import ThemeButton from '@/components/Theme/ThemeButton';
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
-  const hiddenRoutes = ['/raise','/investment-dashboard'];
+  const hiddenRoutes = ['/raise','/investment-dashboard', '/campaignpage'];
 
   const isHiddenRoute = hiddenRoutes.includes(router.pathname);
 

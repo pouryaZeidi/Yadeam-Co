@@ -16,6 +16,7 @@ const Navbar = () => {
           <NavbarItems href={'https://www.linkedin.com/company/yadeam/posts/?feedView=all'} children={'LinkedIn'} />
           <NavbarItems href={'/signup'} children={'Sign Up'} />
           <NavbarItems href={'/login'} children={'Login'} />
+          <NavbarItems href={'/campaignpage'} children={'campaign'} />
           <img src="/YadeamLogo.png" alt="Logo" className='w-[30px]' />
         </div>
         <div className='flex justify-end items-center sm:hidden'>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import InvestmentNavbar from '@/components/Navbar/InvestmentNavbar';
+import PagesNavbar from '@/components/Navbar/PagesNavbar';
 import SearchInput from '@/components/SearchInput';
 import { CiSearch } from 'react-icons/ci';
 import InvestmentCard from '@/components/InvestmentCard/InvestmentCard';
@@ -66,7 +66,7 @@ const InvestmentDashboard = () => {
 
   return (
     <>
-      <InvestmentNavbar />
+      <PagesNavbar />
       <div className='w-full h-[70vh] relative'>
         <img 
           src="/stem.jpg" 
