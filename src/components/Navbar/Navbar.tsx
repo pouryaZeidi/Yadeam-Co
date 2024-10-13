@@ -1,13 +1,12 @@
 import React from 'react';
 import NavbarItems from './NavbarItems';
-import HamburgerMenu from './HamburgerMenu'; // Importing HamburgerMenu
+import HamburgerMenu from './HamburgerMenu'; 
 import { useRouter } from 'next/router';
 
 const Navbar = () => {
   const router = useRouter();
   return (
     <>
-      {router.pathname.includes('sign') || router.pathname.includes('login') || router.pathname.includes('investment-dashboard') ? null :
       <div className='w-full h-[40px] inset-0 z-30 p-4 fixed top-0 '>
         <div className='hidden sm:w-[75%] m-auto sm:flex justify-between items-center'>
           <NavbarItems href={'/'} children={'Home'} />
@@ -24,7 +23,7 @@ const Navbar = () => {
           <HamburgerMenu />
         </div>
       </div>
-      }
+      
     </>
   );
 };

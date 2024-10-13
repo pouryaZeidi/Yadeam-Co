@@ -4,19 +4,19 @@ interface UploadFieldProps {
   label: string;
   accept: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  preview?: boolean;  // برای تصاویر پیش‌نمایش فعال می‌شود
+  preview?: boolean;  
 }
 
 const UploadField: React.FC<UploadFieldProps> = ({ label, accept, onChange, preview = false }) => {
   const [filePreview, setFilePreview] = useState<string | null>(null);
-  const [fileName, setFileName] = useState<string | null>(null); // اضافه شده برای نام فایل
+  const [fileName, setFileName] = useState<string | null>(null); 
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      setFileName(file.name);  // نام فایل ذخیره می‌شود
+      setFileName(file.name); 
       if (preview && file.type.startsWith('image/')) {
-        setFilePreview(URL.createObjectURL(file)); // پیش‌نمایش فقط برای تصاویر
+        setFilePreview(URL.createObjectURL(file)); 
       }
     }
     if (onChange) onChange(e);
@@ -28,7 +28,7 @@ const UploadField: React.FC<UploadFieldProps> = ({ label, accept, onChange, prev
       <div className="relative w-full h-40 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center bg-gray-100 hover:bg-gray-200 transition-colors">
         <input
           type="file"
-          accept={accept}  // فرمت‌های مجاز
+          accept={accept}  
           className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
           onChange={handleFileChange}
         />

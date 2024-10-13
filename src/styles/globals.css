@@ -17,11 +17,11 @@
 }
 
 .shape2 {
-    animation: scale 19s ease-in-out infinite; 
+    animation: scale 15s ease-in-out infinite; 
 }
 
 .shape3 {
-    animation: spin-slow 11s linear infinite;
+    animation: spin-slow 10s linear infinite;
 }
 
 .shape4 {
@@ -29,7 +29,7 @@
 }
 
 .shape5 {
-    animation: scale 24s ease-in-out infinite; 
+    animation: scale 15s ease-in-out infinite; 
 }
 
 @keyframes spin-slow {
@@ -46,6 +46,6 @@
         transform: scale(1);
     }
     50% {
-        transform: scale(2.3); 
+        transform: scale(2.4); 
     }
 }

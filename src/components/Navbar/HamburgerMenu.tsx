@@ -13,20 +13,15 @@ const HamburgerMenu = () => {
 
   return (
     <>
-      
       <CgMenuRound 
         className={`sm:hidden text-4xl hover:text-primary3 cursor-pointer ${theme === 'dark' ? 'text-primary1' : 'text-primary2'}`} 
-        onClick={toggleMenu} 
-      />
-
-     
-      {isOpen && (
+        onClick={toggleMenu}/>
+ 
+       {isOpen && (
         <div className='fixed top-0 right-0 w-full h-full bg-black bg-opacity-95 flex flex-col items-center justify-center z-50'>
-          
           <button 
             onClick={toggleMenu} 
-            className='absolute top-4 right-4 text-white text-1xl p-3 border bg-black bg-opacity-85 rounded-full '
-          >
+            className='absolute top-4 right-4 text-white text-1xl p-3 border bg-black bg-opacity-85 rounded-full '>
             X
           </button>
           <div className='w-full h-[50%] flex flex-col justify-between items-center'>

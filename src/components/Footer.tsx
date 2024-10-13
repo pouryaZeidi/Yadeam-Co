@@ -43,7 +43,6 @@ const Footer = () => {
             <Link href="/contact" className="hover:underline">Contact Us</Link>
           </ul>
         </div>
-
         <div className="flex justify-start mt-5 md:mt-0">
           <Link href="https://twitter.com" className="mx-2"><FaXTwitter className="text-2xl" /></Link>
           <Link href="https://instagram.com" className="mx-2"><FaInstagram className="text-2xl" /></Link>

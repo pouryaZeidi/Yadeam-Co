@@ -3,7 +3,7 @@ import React from 'react';
 const TextSection = () => {
   return (
     <div className="w-[80%] m-auto mt-12">
-       <p className="text-[25px] text-gray-700 mb-6">
+       <p className="text-[17px] sm:text-[19px] md:text-[25px] text-gray-700 mb-6">
        At Yadeam, we provide more than just a platform for raising funds-we offer tailored solutions designed to fuel your startup's growth. Here's why founders trust us to bring their vision to life:        </p>
        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white p-6 shadow-md rounded-lg">

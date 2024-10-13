@@ -1,4 +1,3 @@
-// components/FundingOption.tsx
 import React from 'react';
 
 interface FundingOptionProps {

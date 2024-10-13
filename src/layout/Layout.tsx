@@ -10,7 +10,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <>
       {!isHiddenRoute && <ThemeButton />}
-      <div className='min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white'>
+      <div className='min-h-screen transition-all ease-in-out duration-100 bg-white dark:bg-gray-900 text-black dark:text-white'>
         <main>
           {children}
         </main>

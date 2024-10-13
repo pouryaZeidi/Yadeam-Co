@@ -5,8 +5,8 @@ interface TextAreaProps {
   label: string;
   placeholder?: string;
   value: string;
-  name: string; // اضافه کردن نوع name
-  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void; // تغییر به HTMLTextAreaElement
+  name: string; 
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void; 
 }
 
 const TextArea: React.FC<TextAreaProps> = ({ label, placeholder, value, name, onChange }) => {
@@ -14,7 +14,7 @@ const TextArea: React.FC<TextAreaProps> = ({ label, placeholder, value, name, on
     <div>
       <label className="block text-sm font-medium mt-2 text-gray-700">{label}</label>
       <textarea
-        name={name} // اضافه کردن name
+        name={name} 
         placeholder={placeholder}
         value={value}
         onChange={onChange}

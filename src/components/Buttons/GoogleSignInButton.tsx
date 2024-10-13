@@ -4,7 +4,7 @@ import { FcGoogle } from 'react-icons/fc';
 interface GoogleSignInButtonProps {
   onClick: () => void;
   txt: string;
-  theme: string; // اضافه کردن prop تم
+  theme: string; 
 }
 
 const GoogleSignInButton: React.FC<GoogleSignInButtonProps> = ({ onClick, txt, theme }) => {

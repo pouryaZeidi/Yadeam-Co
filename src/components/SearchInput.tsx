@@ -1,4 +1,3 @@
-// components/SearchInput.tsx
 import React from 'react';
 import { CiSearch } from 'react-icons/ci';
 
@@ -28,10 +27,10 @@ const SearchInput: React.FC<SearchInputProps> = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        className={`p-2 bg-black  placeholder-white outline-none  rounded-l-lg ${inputClassName}`} // کلاس‌ها به اینپوت اضافه می‌شوند
+        className={`p-2 bg-black  placeholder-white outline-none  rounded-l-lg ${inputClassName}`} 
       />
       <button
-        className={`p-2  hover:text-primary1 transition-all ease-in-out duration-150 rounded-r-lg ${buttonClassName}`} // کلاس‌ها به دکمه اضافه می‌شوند
+        className={`p-2  hover:text-primary1 transition-all ease-in-out duration-150 rounded-r-lg ${buttonClassName}`} 
         onClick={onSearchClick} 
       >
         {icon} 

@@ -42,8 +42,8 @@ const Raise = () => {
         
       </div>
       <div className='w-[80%] m-auto flex flex-col justify-center items-center mt-7' >
-        <h2 className='mb-5 text-5xl font-bold'>Ready to Elevate Your Business?</h2>
-        <p className=' text-3xl w-[75%]'>Click below to create your company profile and start your funding journey today!</p>
+        <h2 className='mb-5 text-[22px] sm:text-5xl font-bold'>Ready to Elevate Your Business?</h2>
+        <p className=' text-[19px]  sm:text-[28px] w-[75%]'>Click below to create your company profile and start your funding journey today!</p>
 
       </div>
 
@@ -53,7 +53,7 @@ const Raise = () => {
           text="Apply to Raise" 
           onClick={() => alert('Navigating to Raise Application')}
           theme="primary"
-          className=" w-32 md:!w-36  md:text-lg !bg-primary1 !text-white rounded-md text-nowrap"
+          className=" !w-32 md:!w-36  md:text-lg !bg-primary1 !text-white rounded-md text-nowrap"
         />
     
       </div>
