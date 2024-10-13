@@ -22,7 +22,7 @@ const CampaignPage = () => {
     businessCategory: '',
     houseRegistrationNumber: '',
     companyLocation: '',
-    valuation: '', // Pre-Money Valuation
+    valuation: '', 
     taxRelief: '',
     raisetype: '',
   });
@@ -30,9 +30,9 @@ const CampaignPage = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
 
-    // محدود کردن توضیحات به 200 کاراکتر
+    
     if (name === 'description' && value.length > 200) {
-      return; // اگر بیشتر از 200 کاراکتر بود، تغییری نمی‌دهیم
+      return; 
     }
 
     setFormData((prevData) => ({ ...prevData, [name]: value }));
@@ -172,6 +172,7 @@ const CampaignPage = () => {
               value={formData.houseRegistrationNumber} 
               name="houseRegistrationNumber" 
               onChange={handleInputChange} 
+              className='w-full md:min-w-[400px]'
             />
             <InputField 
               label="Company Location" 
