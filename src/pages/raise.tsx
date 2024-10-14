@@ -10,7 +10,7 @@ import FundingOption from '@/components/FundingOption';
 const Raise = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <PagesNavbar />
+      <PagesNavbar className='!w-[80%]' />
 
       {/* Hero Section */}
       <RaiseHero />
@@ -20,7 +20,6 @@ const Raise = () => {
 
       {/* Funding Options Section */}
       <div className="grid grid-cols-1  gap-6 w-[80%] m-auto mt-10">
-        
         
           <FundingOption 
             title="Equity Crowdfunding"

@@ -31,8 +31,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
       />
       <button
         className={`p-2  hover:text-primary1 transition-all ease-in-out duration-150 rounded-r-lg ${buttonClassName}`} 
-        onClick={onSearchClick} 
-      >
+        onClick={onSearchClick}>
         {icon} 
       </button>
     </div>

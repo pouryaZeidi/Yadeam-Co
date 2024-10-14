@@ -190,7 +190,7 @@ const CampaignPage = () => {
           />
 
           {/* Submit and Preview */}
-          <div className="flex justify-center mt-6">
+          <div className="flex justify-center mt-6 w-[80%] sm:w-[70%] md:w-[40%] m-auto">
             <CustomButton text="Preview" theme="blue" className="w-[100px] mr-9" />
             <CustomButton type="submit" text="Submit" theme="black" className="w-[100px] !bg-black" />
           </div>

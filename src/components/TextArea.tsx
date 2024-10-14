@@ -8,7 +8,6 @@ interface TextAreaProps {
   name: string; 
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void; 
 }
-
 const TextArea: React.FC<TextAreaProps> = ({ label, placeholder, value, name, onChange }) => {
   return (
     <div>
@@ -18,8 +17,7 @@ const TextArea: React.FC<TextAreaProps> = ({ label, placeholder, value, name, on
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="mt-1 block w-full p-2 mb-2  border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-      />
+        className="mt-1 block w-full p-2 mb-2  border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"/>
     </div>
   );
 };

@@ -30,8 +30,7 @@ const UploadField: React.FC<UploadFieldProps> = ({ label, accept, onChange, prev
           type="file"
           accept={accept}  
           className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
-          onChange={handleFileChange}
-        />
+          onChange={handleFileChange}/>
         <div className="text-center text-gray-500 pointer-events-none z-0">
           <p className="text-sm">Drag & drop or click to upload</p>
           <p className="text-xs text-gray-400">Accepted formats: {accept.replace(/,/g, ', ')}</p>
