@@ -10,7 +10,7 @@ import FundingOption from '@/components/FundingOption';
 const Raise = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <PagesNavbar className='!w-[80%]' />
+      <PagesNavbar className='!w-[80%] md:pr-[105px]' />
 
       {/* Hero Section */}
       <RaiseHero />
