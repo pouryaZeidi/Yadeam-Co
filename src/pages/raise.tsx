@@ -42,7 +42,7 @@ const Raise = () => {
       </div>
       <div className='w-[50%] m-auto flex flex-col justify-center  mt-7' >
         <h2 className='mb-5 text-[22px] sm:text-5xl font-bold'>Ready to Elevate Your Business?</h2>
-        <p className=' text-[19px]  sm:text-[28px] '>Click below to create your company profile and start your funding journey today!</p>
+        <p className=' text-[14px]  sm:text-[28px] '>Click below to create your company profile and start your funding journey today!</p>
 
       </div>
 
