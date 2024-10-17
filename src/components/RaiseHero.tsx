@@ -11,14 +11,14 @@ const RaiseHero = () => {
           text="Apply to Raise" 
           onClick={() => alert('Navigating to Raise Application')}
           theme="primary"
-          className=" !w-32 md:!w-36 text-[15px] p-2 mb-4 md:mb-0  sm:text-lg !bg-white !text-primary1 rounded-md text-nowrap"
+          className=" !w-32 md:!w-36 text-[15px] p-2 mb-4 md:mb-0  sm:text-lg !bg-white !text-CTA rounded-md text-nowrap"
         />
       </div>
       <div className="w-full md:w-[40%] m-auto md:m-0 relative">
         <img 
           src="/YadeamHero.png" 
           alt="Yadeam image" 
-          className="rounded-lg object-cover shadow-lg w-[80%] md:w-[85%] m-auto md:m-0  md:absolute md:bottom-[-20px] "
+          className="rounded-lg object-cover shadow-lg w-[80%] md:w-[102%] m-auto md:m-0 lg:h-[500px]  md:absolute md:bottom-[-30px] "
         />
       </div>
     </div>

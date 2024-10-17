@@ -10,7 +10,7 @@ import FundingOption from '@/components/FundingOption';
 const Raise = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <PagesNavbar className='!w-[80%] md:pr-[105px]' />
+      <PagesNavbar className='!w-[80%] md:pr-[10px]' />
 
       {/* Hero Section */}
       <RaiseHero />
@@ -35,14 +35,15 @@ const Raise = () => {
           />
           <FundingOption 
             title="Debt Crowdfunding"
-            description="Borrow funds from multiple investors with an agreement to repay with interest over time. This type of 
-            crowdfunding is perfect for businesses seeking funding without giving up ownership or equity."
+            description="Debt crowdfunding involves raising funds from multiple investors with an agreement
+             to repay the amount borrowed over time. This type of crowdfunding is suitable for businesses
+              seeking funding without giving up ownership or equity."
           />
         
       </div>
       <div className='w-[50%] m-auto flex flex-col justify-center  mt-7' >
         <h2 className='mb-5 text-[22px] sm:text-5xl text-center font-bold'>Ready to Elevate Your Business?</h2>
-        <p className=' text-[14px]  sm:text-[28px] '>Click below to create your company profile and start your funding journey today!</p>
+        <p className=' text-[14px] text-center  sm:text-[28px] '>Click below to create your company profile and start your funding journey today!</p>
 
       </div>
 
@@ -52,7 +53,7 @@ const Raise = () => {
           text="Apply to Raise" 
           onClick={() => alert('Navigating to Raise Application')}
           theme="primary"
-          className=" !w-32 md:!w-36  md:text-lg !bg-primary1 !text-white rounded-md text-nowrap"
+          className=" !w-32 md:!w-36  md:text-lg !bg-CTA !text-white rounded-md text-nowrap"
         />
     
       </div>
